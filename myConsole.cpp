@@ -128,7 +128,7 @@ int main(void) {
 	//enter the console directory
 	chdir("sda/user");
 	string user;
-	cout << "choose an user";
+	cout << "choose an user:";
 	cin >> user;
 	const char* userName = user.c_str();
 	chdir(userName);
@@ -141,7 +141,7 @@ int main(void) {
 		}
 		if (command == "ls") {
 			string direct;
-			direct = "/mnt/c/Users/nicolas/myConsole/sda/user/" + user + directory;
+			direct = "~/myConsole/sda/user/" + user + directory;
 			ls(direct);
 		}
 		if (command == "quit") {
