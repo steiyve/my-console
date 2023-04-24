@@ -119,6 +119,13 @@ void ls(string DIR) {
 	}
 }
 
+/**********************************************
+ fontion qui prend le message en arguent et le print.
+ **********************************************/
+void echo(string message){
+	cout << message << "\n";
+}
+
 
 
 int main(void) {
@@ -182,6 +189,17 @@ int main(void) {
 				}
 				if (command == "q") {
 					break;
+				}
+			}
+		}
+		else if (command == "code"){
+			while (true){
+				printPath(directory, "[code mode]");
+				string text = " ";
+				cin >> command >> text;
+
+				if (command == "echo"){
+					echo(text);
 				}
 			}
 		}
