@@ -201,6 +201,9 @@ int main(void) {
 				if (command == "echo"){
 					echo(text);
 				}
+				else if (command == "quit"){
+					break;
+				}
 			}
 		}
 	}
