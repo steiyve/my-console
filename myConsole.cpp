@@ -148,7 +148,7 @@ int main(void) {
 		}
 		if (command == "ls") {
 			string direct;
-			direct = "~/myConsole/sda/user/" + user + directory;
+			direct = "~/my-console/sda/user/" + user + directory;
 			ls(direct);
 		}
 		if (command == "quit") {
