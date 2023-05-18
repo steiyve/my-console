@@ -126,6 +126,49 @@ void echo(string message){
 	cout << message << "\n";
 }
 
+void boucle(string list, string dir){
+	if (list == "touch") {
+		string file;
+		cout << "the file name";
+		cin >> file;
+		if (file != " ") {
+			creatFile(file);
+		}
+		else {
+			cout << "invalid file name\n";
+		}
+	}
+	if (list == "changeFile") {	
+		string file;
+		cout << "the file name";
+		cin >> file;
+		string text;
+		cout << "the text you to add:";
+		cin >> text;
+		modifieFile(file, text);
+	}
+	if (list == "mkdir"){
+		string file;
+		cout << "the file name";
+		cin >> file;
+		
+		makeDir(file, directory);
+	}
+	if (list == "cd") {
+		string directory;
+		cout << "the moving to dir:";
+		cin >> directory;
+		cd(directory, dir);
+		directory = directory + dir;
+		
+	}
+	if (list == "cat") {
+		string file;
+		cout << "the file name";
+		cin >> file;
+		cat(file);
+	}
+}
 
 
 int main(void) {
@@ -200,6 +243,21 @@ int main(void) {
 
 				if (command == "echo"){
 					echo(text);
+				}
+				if (command == "for"){
+					int repete;
+					cout << "repette number:";
+					cin >> repete;
+					string operation[repete]; 
+					for (int i = 0; i<repete; i++){
+						cout << "the operation:";
+						string comande;
+						cin >> comande;
+						operation[i] = comande; 
+					}
+					for (int i = 0; i<repete; i++){
+						boucle(operation[i],directory);
+					}
 				}
 				else if (command == "quit"){
 					break;
