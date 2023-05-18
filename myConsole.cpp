@@ -11,6 +11,7 @@ but: avoir ma propre console
 #include <sys/types.h>
 #include <bits/stdc++.h>
 #include <cstring>
+#include <git2.h>
 
 using namespace std;
 
@@ -170,6 +171,19 @@ void boucle(string list, string dir){
 	}
 }
 
+void update(){
+	git_repository *repo = NULL;
+	git_clone_options options = GIT_CLONE_OPTIONS_INIT;
+	const char *url = "https://github.com/username/repo.git";
+	const char *path = "repo";
+	int error = git_pull(&repo, url, path, &options);
+	if (error < 0) {
+		cerr << "Error pulling repository: " << giterr_last()->message << endl;
+		return 1;
+	}
+	git_repository_free(repo);
+}
+
 
 int main(void) {
 	bool run = true;
@@ -193,6 +207,10 @@ int main(void) {
 			string direct;
 			direct = "~/my-console/sda/user/" + user + directory;
 			ls(direct);
+		}
+
+		if (command == "Syu"){
+
 		}
 		if (command == "quit") {
 			break;
