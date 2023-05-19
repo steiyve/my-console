@@ -11,7 +11,7 @@ but: avoir ma propre console
 #include <sys/types.h>
 #include <bits/stdc++.h>
 #include <cstring>
-#include <git2.h>
+
 
 using namespace std;
 
@@ -36,7 +36,17 @@ fonction qui imprime la liste des commandes
 ne prend rien en entre
 *********************************/
 void printHelp() {
-	string listCommande[10] = { "mkdir", "echo", "ls", "touch", "cat", "cd", "changeFile", "quit", "fs", "q"};
+	fstream monFichier;
+	int nbCommande = 10;
+	string listCommande[nbCommande] = { "mkdir", "echo", "ls", "touch", "cat", "cd", "changeFile", "quit", "fs", "q"};
+	monFichier.open("sda/bin/pkgs/pkgs.txt", ios::in);
+	string text;
+	string line;
+	while (getline(monFichier, line)) {
+		text = line;
+		cout << text;
+		cout << line;
+	}
 	for (int i = 0; i < 10; i++) {
 		cout << listCommande[i];
 		cout << "\n";
@@ -171,18 +181,7 @@ void boucle(string list, string dir){
 	}
 }
 
-void update(){
-	git_repository *repo = NULL;
-	git_clone_options options = GIT_CLONE_OPTIONS_INIT;
-	const char *url = "https://github.com/username/repo.git";
-	const char *path = "repo";
-	int error = git_pull(&repo, url, path, &options);
-	if (error < 0) {
-		cerr << "Error pulling repository: " << giterr_last()->message << endl;
-		return 1;
-	}
-	git_repository_free(repo);
-}
+
 
 
 int main(void) {
@@ -209,9 +208,6 @@ int main(void) {
 			ls(direct);
 		}
 
-		if (command == "Syu"){
-
-		}
 		if (command == "quit") {
 			break;
 		}
