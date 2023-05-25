@@ -11,9 +11,19 @@ but: avoir ma propre console
 #include <sys/types.h>
 #include <bits/stdc++.h>
 #include <cstring>
+#include <stdlib.h>
 
 
 using namespace std;
+
+bool run;
+string command;
+string user;
+string directory;
+
+
+
+
 
 
 /********************************
@@ -38,15 +48,7 @@ ne prend rien en entre
 void printHelp() {
 	fstream monFichier;
 	int nbCommande = 10;
-	string listCommande[nbCommande] = { "mkdir", "echo", "ls", "touch", "cat", "cd", "changeFile", "quit", "fs", "q"};
-	monFichier.open("sda/bin/pkgs/pkgs.txt", ios::in);
-	string text;
-	string line;
-	while (getline(monFichier, line)) {
-		text = line;
-		cout << text;
-		cout << line;
-	}
+	string listCommande[13] = { "mkdir", "echo", "ls", "touch", "cat", "cd", "changeFile", "quit", "fs", "q", "cmatrix", "neofetch"};
 	for (int i = 0; i < 10; i++) {
 		cout << listCommande[i];
 		cout << "\n";
@@ -162,7 +164,7 @@ void boucle(string list, string dir){
 		string file;
 		cout << "the file name";
 		cin >> file;
-		
+		directory = directory + dir;
 		makeDir(file, directory);
 	}
 	if (list == "cd") {
@@ -181,13 +183,21 @@ void boucle(string list, string dir){
 	}
 }
 
+/*
+	function qui prend rien en parametre
+*/
+void cmatrix() {
+    system("sda/bin/pkgs/the-pakage/cmatrix.sh"); // myfile.sh should be chmod +x
+}
 
-
+void neofetch() {
+    system("sda/bin/pkgs/the-pakage/neofetch.sh"); // myfile.sh should be chmod +x
+}
 
 int main(void) {
-	bool run = true;
-	string directory = "/";
-	string command = " ";
+	run = true;
+	directory = "/";
+	command = " ";
 	//enter the console directory
 	chdir("sda/user");
 	string user;
@@ -277,6 +287,13 @@ int main(void) {
 					break;
 				}
 			}
+		}
+		else if (command == "cmatrix"){
+			cmatrix();
+		}
+
+		else if (command == "neofetch"){
+			neofetch();
 		}
 	}
 	return 0;

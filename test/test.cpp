@@ -5,12 +5,19 @@ using namespace std;
 
 int main(){
     fstream monFichier;
-    monFichier.open("sda/bin/pkgs/pkgs.txt", ios::in);
+    int ligne = 0;
+    monFichier.open("test.txt", ios::in);
+    string word[0] = {};
 	string text;
 	string line;
 	while (getline(monFichier, line)) {
-		text = line;
-		cout << text;
-		cout << line;
+		ligne++;
+        text = line;
+		word[ligne] = line;
+        cout << text << "\n";
 	}
+    cout << ligne;
+    for (int i=0; i<ligne; i++){
+        cout << word[i] << "\n";
+    }
 }

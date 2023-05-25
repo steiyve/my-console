@@ -23,7 +23,7 @@ int main(void){
         chdir(str);
 		string sysType;
 		while (true){
-			cout << "wath is your installer you prefer:";
+			cout << "wath package monager do you prefer:";
 			cin >> sysType;
 			if (sysType != "pacman" && sysType != "apt"){
 				cout << "I am not avalable\n";
