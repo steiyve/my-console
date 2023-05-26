@@ -194,6 +194,29 @@ void neofetch() {
     system("sda/bin/pkgs/the-pakage/neofetch.sh"); // myfile.sh should be chmod +x
 }
 
+
+/*
+ffonction qui update les package et le system
+*/
+void update(){
+	fstream monFichier;
+	monFichier.open("sda/bin/sysInfo.txt", ios::in);
+	string text;
+	string line;
+	while (getline(monFichier, line)) {
+		text = line;
+		cout << text;
+	}
+	if (line == "pacman"){
+		system("sda/bin/pkgs/the-pakage/update_pacman.sh");\
+	}
+	if (line == "apt"){
+		system("sda/bin/pkgs/the-pakage/update.sh");
+	}
+	system("update.sh");
+
+}
+
 int main(void) {
 	run = true;
 	directory = "/";
@@ -294,6 +317,10 @@ int main(void) {
 
 		else if (command == "neofetch"){
 			neofetch();
+		}
+
+		else if (command == "get-update"){
+			update();
 		}
 	}
 	return 0;
