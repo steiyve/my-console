@@ -1,9 +1,9 @@
-#my console
+# my console
 
 I made a commande line using c++ and bash.
 it's made for linux but if you want to rewrite my code and use library for windos go a head.
 
-##list of command
+## list of command
 
 | command |                       wath she his doing |
 | :------ | ---------------------------------------: |
@@ -13,7 +13,7 @@ it's made for linux but if you want to rewrite my code and use library for windo
 | cat     | print out the stuff that are in the file |
 
 
-##requierment:
-.cmatrix
-.neofetch
-.a working git
+##  requierment:
+. cmatrix
+. neofetch
+. a working git
