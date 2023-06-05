@@ -14,6 +14,6 @@ it's made for linux but if you want to rewrite my code and use library for windo
 
 
 ##  requierment:
-. cmatrix
-. neofetch
-. a working git
+- cmatrix
+- neofetch
+- a working git
