@@ -61,6 +61,29 @@ int main(void){
 			cout << "Directory created\n";
 			chdir(str);
 		}
-		return 0;
     }
+	chdir("../..");
+	
+	
+	string user;
+	string password;
+	cout << "your name:";
+	cin >> user;
+	cout << "the password for " << user << ":";
+	cin >> password;
+	// Creating a directory
+	if (mkdir("etc", 0777) == -1){
+		cerr << "Error :  " << strerror(errno) << endl;
+		return errno;
+	}
+	else{
+		cout << "Directory created\n";
+		chdir("etc");
+		fstream monFichier;
+		string fileName = "passwd_" + user + ".txt";
+		monFichier.open(fileName, ios::app);
+		monFichier << password << "\n";
+		monFichier.close();
+	}
+	return 0;
 }

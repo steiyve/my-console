@@ -1,3 +1,5 @@
+/sda
+/sda_backup
 # Prerequisites
 *.d
 

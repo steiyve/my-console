@@ -15,10 +15,8 @@ int main(){
   for (int i = 0; i<2; i++){
     monFicher << pkgsList[i] << "\n";
     passed ++;
-    cout << "allo" << passed << "\n";
   }
   passed ++;
-  cout << "allo" << passed << "\n";
   monFicher.close();
   return 0;
 }

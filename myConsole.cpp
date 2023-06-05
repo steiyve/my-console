@@ -12,7 +12,7 @@ but: avoir ma propre console
 #include <bits/stdc++.h>
 #include <cstring>
 #include <stdlib.h>
-
+#include "login.cpp"
 
 using namespace std;
 
@@ -222,10 +222,16 @@ int main(void) {
 	directory = "/";
 	command = " ";
 	//enter the console directory
-	chdir("sda/user");
+	
 	string user;
-	cout << "choose an user:";
+	string pswd;
+	cout << "enter your user name:";
 	cin >> user;
+	cout << "enter your password:";
+	cin >> pswd;
+	login(user, pswd);
+	
+	chdir("sda/");
 	const char* userName = user.c_str();
 	chdir(userName);
 
@@ -237,7 +243,7 @@ int main(void) {
 		}
 		if (command == "ls") {
 			string direct;
-			direct = "~/my-console/sda/user/" + user + directory;
+			direct = "~/my-console/sda/" + user + directory;
 			ls(direct);
 		}
 
