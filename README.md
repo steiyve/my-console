@@ -5,11 +5,11 @@ it's made for linux but if you want to rewrite my code and use library for windo
 
 ## list of command
 
-| command |                       wath she his doing |
+| command | wath she his doing                       |
 | :------ | ---------------------------------------: |
-| ls      |       list all the file in the directory |
-| mkdir   |                               make a dir |
-| touch   |                             creat a file |
+| ls      | list all the file in the directory       |
+| mkdir   | make a dir                               |
+| touch   | creat a file                             |
 | cat     | print out the stuff that are in the file |
 
 
