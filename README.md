@@ -17,3 +17,13 @@ it's made for linux but if you want to rewrite my code and use library for windo
 - cmatrix
 - neofetch
 - a working git
+
+## install it
+
+```bash
+    #run the installer
+    chmod u+x install.sh
+    ./install.sh
+    #run it
+    ./run.sh
+```
