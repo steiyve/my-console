@@ -17,6 +17,12 @@ it's made for linux but if you want to rewrite my code and use library for windo
 - cmatrix
 - neofetch
 - a working git
+- neovim
+- vim
+- emac
+- nano
+
+
 
 ## install it
 
