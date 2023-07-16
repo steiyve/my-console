@@ -217,6 +217,19 @@ void update(){
 
 }
 
+void vim(){
+	system("sda/bin/pkgs/the-pakage/vim.sh");
+}
+void nvim(){
+	system("sda/bin/pkgs/the-pakage/nvim.sh");
+}
+void emac(){
+	system("sda/bin/pkgs/the-pakage/emac.sh");
+}
+
+
+
+
 int main(void) {
 	run = true;
 	directory = "/";
@@ -327,6 +340,15 @@ int main(void) {
 
 		else if (command == "get-update"){
 			update();
+		}
+		else if(command == "vim"){
+			vim();
+		}
+		else if(command == "nvim"){
+			nvim();
+		}
+		else if(command == "emac"){
+			emac();
 		}
 	}
 	return 0;

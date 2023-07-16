@@ -39,6 +39,7 @@ int main(void){
 		monFichier.close();
     }
 	str = "home";
+	string user;
 	chdir("..");
 	cout << str;
 	if (mkdir(str, 0777) == -1){
@@ -48,7 +49,7 @@ int main(void){
 	else{
 		cout << "Directory created\n";
         chdir("home");
-		string user;
+		
 		cout << "your name:";
 		cin >> user;
 		str = user.c_str();
@@ -67,8 +68,6 @@ int main(void){
 	
 	string user;
 	string password;
-	cout << "your name:";
-	cin >> user;
 	cout << "the password for " << user << ":";
 	cin >> password;
 	// Creating a directory

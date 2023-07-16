@@ -2,6 +2,10 @@
 clear
 
 mkdir sda
+cd sda
+mkdir var
+touch system.log
+cd ..
 chmod u+x run.sh
 g++ install.cpp -o install
 ./install
@@ -15,6 +19,9 @@ chmod u+x cmatrix.sh
 chmod u+x neofetch.sh
 chmod u+x update_pacman.sh
 chmod u+x update.sh
+chmod u+x nvim.sh
+chmod u+x vim.sh
+chmod u+x emac.sh
 cd ../../../..
 chmod u+x update.sh
 g++ firstTimeRun.cpp -o firstTimeRun.o

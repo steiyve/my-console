@@ -17,6 +17,7 @@ it's made for linux but if you want to rewrite my code and use library for windo
 - cmatrix
 - neofetch
 - a working git
+- python3 and tkinter
 
 ## install it
 
@@ -27,3 +28,19 @@ it's made for linux but if you want to rewrite my code and use library for windo
     #run it
     ./run.sh
 ```
+
+## install python3 and tkinter
+### if you are on Arch and you have som skils
+```bash
+    #install tkinter
+    sudo pacman -S tk
+```
+### if you are on ubuntu I also respect you
+```bash
+    #install tkinter
+    sudo apt install python3-tk
+```
+
+sorry for the other os but i dont know how to use your pakcage manager
+
+###########btw i use Arch

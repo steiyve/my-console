@@ -1,0 +1,5 @@
+cmatrix
+neofetch
+vim
+nvim
+emac
