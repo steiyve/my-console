@@ -17,7 +17,16 @@ it's made for linux but if you want to rewrite my code and use library for windo
 - cmatrix
 - neofetch
 - a working git
+<<<<<<< HEAD
 - python3 and tkinter
+=======
+- neovim
+- vim
+- emac
+- nano
+
+
+>>>>>>> f1459c07d9130201201abc2d3bf0ab2cadabf388
 
 ## install it
 
